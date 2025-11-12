@@ -49,24 +49,28 @@ def main() -> None:
 import re
 
 
-text = list(input('enter your text -->').split())
-for word in range(len(text)):
-    text[word] = re.sub(r'[!-/:-@\[-`{-~]', r'', text[word])
+def main() -> None:
+    text = list(input('enter your text -->').split())
+    for word in range(len(text)):
+        text[word] = re.sub(r'[!-/:-@\[-`{-~]', r'', text[word])
 
-print(text)
+    print(text)
 
 
 #4rd
 import re
 
-text = list(input('enter your text -->').split())
-for word in range(len(text)):
-    text[word] = re.sub(r'[!-/:-@\[-`{-~]', r'', text[word])
 
-print(list(set(text)))
+def main() -> None:
+    text = list(input('enter your text -->').split())
+    for word in range(len(text)):
+        text[word] = re.sub(r'[!-/:-@\[-`{-~]', r'', text[word])
 
+    print(list(set(text)))
+
+
+#5th
 import random as rand
-
 import numpy
 
 
@@ -76,17 +80,25 @@ def chance_machine() -> list:
         exit_list.append(rand.randrange(100))
     return exit_list
 
-l = chance_machine()
-print(l, numpy.mean(l))
+
+def main() -> None:
+    l = chance_machine()
+    print(l, numpy.mean(l))
+
 
 #6th
-d = []
-number = int(input('Enter one number -->'))
-for divs in range(1, int(number**0.5)+1):
-    if number % divs == 0:
-        d.append(divs)
-d += [number//divs for divs in d]
-print(sorted(d))
+def input_number() -> int:
+    return int(input('Enter one number -->'))
+
+def main() -> None:
+    d = []
+    number = input_number()
+    for divs in range(1, int(number**0.5)+1):
+        if number % divs == 0:
+            d.append(divs)
+    d += [number//divs for divs in d]
+    print(sorted(d))
+
 
 #8th
 def sort_str(input_str: str) ->str:
