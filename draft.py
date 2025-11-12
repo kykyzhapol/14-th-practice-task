@@ -1,45 +1,53 @@
 #1ts
-'''
-input_text = 'Enter 10 numbers through space -->'
-input_list = []
 
-while len(input_list) != 10:
-    try:
-        user_input = input(input_text)
-        input_list = list(map(int, user_input.split()))
-        if len(input_list) != 10:
-            print(f'Please enter exactly 10 numbers')
-    except ValueError:
-        print('please, enter correct data')
-        input_list = []
+def input_data() -> list:
+    input_text = 'Enter 10 numbers through space -->'
+    input_list = []
 
+    while len(input_list) != 10:
+        try:
+            user_input = input(input_text)
+            input_list = list(map(int, user_input.split()))
+            if len(input_list) != 10:
+                print(f'Please enter exactly 10 numbers')
+        except ValueError:
+            print('please, enter correct data')
+            input_list = []
+    return input_list
 
-new_list = [input_list[0] + input_list[1]]
-for n in range(2, 9):
-    new_list.append(input_list[n] + input_list[n+1])
+def main() -> None:
+    in_lst = input_data()
+    new_list = [in_lst[0] + in_lst[1]]
+    for n in range(2, 9):
+        new_list.append(in_lst[n] + in_lst[n+1])
 
-print(new_list)
+    print(new_list)
 
-from os.path import split
+main()
 
 #2nd
-input_text = 'Enter numbers through space -->'
-input_list = [1.1]
+def input_data() -> list:
+    input_text = 'Enter numbers through space -->'
+    input_list = [1.1]
 
-while int(input_list[0]) != input_list[0]:
-    try:
-        user_input = input(input_text)
-        input_list = list(map(int, user_input.split()))
-    except ValueError:
-        print('please, enter correct data')
-        input_list = []
+    while int(input_list[0]) != input_list[0]:
+        try:
+            user_input = input(input_text)
+            input_list = list(map(int, user_input.split()))
+        except ValueError:
+            print('please, enter correct data')
+            input_list = []
+    return input_list
 
-new_list = [el for el in input_list if el != 3]
-print(new_list)
+
+def main() -> None:
+    new_list = [el for el in input_data() if el != 3]
+    print(new_list)
 
 
 #3rd
 import re
+
 
 text = list(input('enter your text -->').split())
 for word in range(len(text)):
@@ -227,4 +235,3 @@ for word in input_words:
 print(f'dotted letters - {dot_counter}, '
       f'normal letter - {normal_letter_counter} '
       f'list of owerdoted words : {owerdoted_words}')
-'''
