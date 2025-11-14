@@ -3,7 +3,7 @@ import re
 
 def main() -> None:
     '''
-    main function
+    Main function, where main algorithm.
     :return:
     '''
     text = list(input('enter your text -->').split())

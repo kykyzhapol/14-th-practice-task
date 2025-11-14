@@ -1,7 +1,7 @@
 def input_data() -> list:
     '''
-    function for import data from consol
-    :return:
+    Function for import data from keyboard.
+    :return input_list:
     '''
     input_text = 'Enter numbers through space -->'
     input_list = [1.1]
@@ -18,7 +18,7 @@ def input_data() -> list:
 
 def main() -> None:
     '''
-    main function
+    Main function, where main algorithm.
     :return:
     '''
     new_list = [el for el in input_data() if el != 3]

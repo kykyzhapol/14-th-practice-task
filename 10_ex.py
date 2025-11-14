@@ -1,4 +1,9 @@
 def import_lst(number: int) -> list:
+    '''
+    Function for import info from keyboard correct.
+    :param number:
+    :return lst:
+    '''
     lst = []
     while len(lst) == 0:
         try:
@@ -9,6 +14,10 @@ def import_lst(number: int) -> list:
 
 
 def main() -> None:
+    '''
+    Main function, where main algorithm.
+    :return:
+    '''
     lst1 = import_lst(1)
     lst2 = import_lst(2)
 

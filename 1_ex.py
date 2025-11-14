@@ -1,7 +1,7 @@
 def input_data() -> list:
     '''
-    take data from consol
-    :return:
+    Function for correct taking data from keyboard.
+    :return input_list:
     '''
     input_text = 'Enter 10 numbers through space -->'
     input_list = []
@@ -20,7 +20,8 @@ def input_data() -> list:
 
 def main() -> None:
     '''
-    main function
+    Main function, where main algorithm.
+    :return:
     '''
     in_lst = input_data()
     new_list = [in_lst[0] + in_lst[1]]

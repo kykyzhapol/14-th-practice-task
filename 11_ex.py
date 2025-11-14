@@ -1,8 +1,14 @@
 def import_data() -> list:
+    '''
+    Function for correct import data from keyboard.
+    First argument of list - step, second - direction.
+    :return list of lists:
+    '''
     lst = []
     while len(lst) == 0:
         try:
-            lst = [int(n) for n in input('enter list thought space -->').split()]
+            lst = [int(n) for n in
+                   input('enter list thought space -->').split()]
         except ValueError:
             print('Please, enter elements correct')
 
@@ -20,7 +26,11 @@ def import_data() -> list:
     return [lst, in_command]
 
 
-def main():
+def main() -> None:
+    '''
+    Main function, where main algorithm.
+    :return:
+    '''
     imported_data = import_data()
     lst = imported_data[0]
     # Извлекаем направление и количество шагов
