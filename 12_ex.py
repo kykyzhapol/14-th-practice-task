@@ -48,8 +48,7 @@ def main() -> None:
                 dot_counter_w += 1
             else:
                 normal_letter_counter_w += 1
-        # Убрано else и исправлено условие
-        if dot_counter_w >= 2:  # Исправлено: dot_counter_w вместо dot_counter
+        if dot_counter_w >= 2:
             owerdoted_words.append(word)
         dot_counter += dot_counter_w
         normal_letter_counter += normal_letter_counter_w
